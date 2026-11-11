@@ -1,0 +1,9 @@
+**/node_modules
+.git
+*.md
+k8s
+scripts
+cloudwatch
+aws
+Jenkinsfile
+docker-compose.yml

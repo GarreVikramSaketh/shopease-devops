@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shopease
+  namespace: shopease
+  labels:
+    app: shopease
+spec:
+  replicas: 2
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app: shopease
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0          # zero-downtime: old pods stay until new ones are ready
+  template:
+    metadata:
+      labels:
+        app: shopease
+    spec:
+      terminationGracePeriodSeconds: 20
+      containers:
+        - name: shopease
+          image: shopease:__TAG__          # Jenkins replaces __TAG__ with the build number
+          imagePullPolicy: IfNotPresent    # image is imported locally into k3s, no registry needed
+          ports:
+            - containerPort: 3000
+          env:
+            - name: BUILD_NUMBER
+              value: "__TAG__"
+          readinessProbe:
+            httpGet: { path: /health, port: 3000 }
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          livenessProbe:
+            httpGet: { path: /health, port: 3000 }
+            initialDelaySeconds: 10
+            periodSeconds: 15
+          resources:
+            requests: { cpu: 50m, memory: 64Mi }
+            limits: { cpu: 500m, memory: 256Mi }

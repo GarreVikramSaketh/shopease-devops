@@ -1,0 +1,16 @@
+{
+  "name": "shopease",
+  "version": "1.0.0",
+  "description": "ShopEase - demo e-commerce store for a full DevOps pipeline (GitHub -> Jenkins -> Docker -> Kubernetes on AWS EC2)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/api.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

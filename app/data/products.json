@@ -1,0 +1,18 @@
+[
+  { "id": 1,  "name": "Wireless Earbuds Pro",      "category": "electronics", "price": 2499, "mrp": 3999, "rating": 4.5, "emoji": "🎧", "color": "#e0e7ff", "description": "Active noise cancellation, 30-hour battery and quick charge." },
+  { "id": 2,  "name": "Smart Watch Fit",           "category": "electronics", "price": 3299, "mrp": 4999, "rating": 4.3, "emoji": "⌚", "color": "#dbeafe", "description": "Heart-rate, SpO2, sleep tracking and 7-day battery life." },
+  { "id": 3,  "name": "Bluetooth Speaker Mini",    "category": "electronics", "price": 1499, "mrp": 2199, "rating": 4.4, "emoji": "🔊", "color": "#e0f2fe", "description": "Pocket-sized speaker with deep bass and IPX7 water resistance." },
+  { "id": 4,  "name": "Mechanical Keyboard",       "category": "electronics", "price": 3899, "mrp": 5499, "rating": 4.7, "emoji": "⌨️", "color": "#ede9fe", "description": "Hot-swappable switches, RGB backlight, wired and wireless." },
+  { "id": 5,  "name": "Classic Cotton T-Shirt",    "category": "fashion",     "price": 499,  "mrp": 799,  "rating": 4.2, "emoji": "👕", "color": "#fce7f3", "description": "100% combed cotton, breathable regular fit." },
+  { "id": 6,  "name": "Running Shoes Aero",        "category": "fashion",     "price": 2799, "mrp": 3999, "rating": 4.6, "emoji": "👟", "color": "#ffe4e6", "description": "Lightweight mesh upper with responsive foam cushioning." },
+  { "id": 7,  "name": "Denim Jacket",              "category": "fashion",     "price": 1899, "mrp": 2999, "rating": 4.1, "emoji": "🧥", "color": "#fae8ff", "description": "Washed denim with a relaxed fit for every season." },
+  { "id": 8,  "name": "Leather Backpack",          "category": "fashion",     "price": 2299, "mrp": 3299, "rating": 4.5, "emoji": "🎒", "color": "#fef3c7", "description": "Fits a 15.6-inch laptop, with padded straps." },
+  { "id": 9,  "name": "Ceramic Coffee Mug Set",    "category": "home",        "price": 699,  "mrp": 999,  "rating": 4.4, "emoji": "☕", "color": "#fef9c3", "description": "Set of four microwave-safe 350 ml mugs." },
+  { "id": 10, "name": "Indoor Plant - Monstera",   "category": "home",        "price": 899,  "mrp": 1299, "rating": 4.6, "emoji": "🪴", "color": "#dcfce7", "description": "Low-maintenance plant that comes in a ceramic pot." },
+  { "id": 11, "name": "Scented Candle Trio",       "category": "home",        "price": 599,  "mrp": 899,  "rating": 4.3, "emoji": "🕯️", "color": "#ffedd5", "description": "Lavender, vanilla and sandalwood soy wax candles." },
+  { "id": 12, "name": "Non-stick Cookware Set",    "category": "home",        "price": 2599, "mrp": 3999, "rating": 4.2, "emoji": "🍳", "color": "#f1f5f9", "description": "Three-piece induction-ready set with glass lids." },
+  { "id": 13, "name": "Yoga Mat Premium",          "category": "sports",      "price": 999,  "mrp": 1499, "rating": 4.5, "emoji": "🧘", "color": "#ccfbf1", "description": "6 mm anti-slip mat with carry strap." },
+  { "id": 14, "name": "Adjustable Dumbbells",      "category": "sports",      "price": 4499, "mrp": 6499, "rating": 4.4, "emoji": "🏋️", "color": "#d1fae5", "description": "2-in-1 set that adjusts from 2 to 10 kg per hand." },
+  { "id": 15, "name": "Cricket Bat - English Willow", "category": "sports",   "price": 3499, "mrp": 4999, "rating": 4.6, "emoji": "🏏", "color": "#ecfccb", "description": "Grade 2 English willow, full size, with cover." },
+  { "id": 16, "name": "Steel Water Bottle",        "category": "sports",      "price": 449,  "mrp": 699,  "rating": 4.3, "emoji": "🥤", "color": "#cffafe", "description": "Insulated 1 L bottle keeps drinks cold for 24 hours." }
+]
