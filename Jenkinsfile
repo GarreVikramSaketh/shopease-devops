@@ -81,15 +81,21 @@ pipeline {
 
         stage('Smoke test') {
             steps {
+                // Wait until the new build answers 3 times in a row (old pods may still be shutting down)
                 sh '''
-                    for i in $(seq 1 20); do
+                    sleep 10
+                    OK=0
+                    for i in $(seq 1 30); do
                       BUILD=$(curl -fsS http://localhost/api/version | sed -n 's/.*"build":"\\([^"]*\\)".*/\\1/p') || true
-                      if [ "$BUILD" = "${IMAGE_TAG}" ]; then
-                        echo "Live site is serving build #${BUILD}"
-                        curl -fsS http://localhost/health
-                        exit 0
+                      if [ "$BUILD" = "${IMAGE_TAG}" ] && curl -fsS -o /dev/null http://localhost/health; then
+                        OK=$((OK+1))
+                        echo "Check $OK/3 passed: live site is serving build #${BUILD}"
+                        if [ "$OK" -ge 3 ]; then exit 0; fi
+                      else
+                        OK=0
+                        echo "Waiting for build #${IMAGE_TAG} (currently: ${BUILD:-none})..."
                       fi
-                      echo "Waiting for build #${IMAGE_TAG} (currently: ${BUILD:-none})..."; sleep 3
+                      sleep 3
                     done
                     echo "Smoke test failed"; exit 1
                 '''
